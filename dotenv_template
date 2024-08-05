@@ -1,0 +1,8 @@
+// This is just a template of your dotenv file, which should contain all the information below.
+// Copy the file, name it ".env", replace all the data between the apostrophies with yours and save the changes.
+// Do not forget about removing the comments, otherwise it will not work.
+
+BL_API_TOKEN = "YOUR BL API TOKEN"
+WOO_STORE_URL = "https://store.example.com"
+WOO_STORE_PUBLIC_KEY = "YOUR WOO STORE PUBLIC KEY"
+WOO_STORE_SECRET = "YOUR WOO STORE SECRET KEY"
