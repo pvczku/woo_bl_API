@@ -1,14 +1,11 @@
 require("dotenv").config()
 
+const dataRouter = require("./routers/dataRouter.js")
+
 const http = require("http")
-const PORT = 42780
-
-const server = http.createServer((req,res) => {
-    res.statusCode = 200
-    res.setHeader("content-type", "text/plain")
-    res.end("Hello")
+const fs = require("fs")
+const server = http.createServer( async (req,res) => {
+    await dataRouter(req,res)
 })
 
-server.listen(PORT, () => {
-    console.log(`Server running on: http://localhost:${PORT}`)
-})
+server.listen(3000, () => {})
