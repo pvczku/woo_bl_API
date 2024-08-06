@@ -128,3 +128,10 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# OWN
+.DS_Store
+default.txt
+log.txt
+test.http
+functions_php_theme_code.php
