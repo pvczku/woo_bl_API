@@ -2,12 +2,13 @@ const dataHandler = require("../modules/dataHandler.js")
 const router = async (req, res) => {
     if (req.method === "POST") {
         if (req.url === "/newOrder") {
-            console.log("NOWY!")
+            console.log("nowy!")
             req.on("data", async (data) => {
                 const decodedData = await dataHandler.decodeData(data)
-                console.log(decodedData)
-                res.writeHead(200, {"content-type": "application/json"})
-                res.end(JSON.stringify(decodedData))
+                // console.log(decodedData)
+                const newOrder = await dataHandler.prepareData(decodedData)
+                // res.writeHead(200, {"content-type": "application/json"})
+                // res.end(JSON.stringify(decodedData))
             })
         }
     }
